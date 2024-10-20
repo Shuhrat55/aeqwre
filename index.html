@@ -9,45 +9,6 @@
     <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body>
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
-    <script>
-      vkBridge.send('VKWebAppInit');
-          vkBridge.send('VKWebAppCheckNativeAds', { ad_format: 'interstitial'});
-          vkBridge.send('VKWebAppShowBannerAd', {
-              banner_location: 'bottom'
-              })
-              .then((data) => { 
-                if (data.result) {
-                  // Баннерная реклама отобразилась
-                }
-              })
-              .catch((error) => {
-                // Ошибка
-                console.log(error);
-              });
-      
-            function FromUnityToJs ()   // функция вызывается из Unity
-      {
-        vkBridge.send('VKWebAppShowNativeAds', {
-          ad_format: 'interstitial' /* Тип рекламы */
-          })
-          .then( (data) => { 
-            if (data.result) {
-              // Реклама была показана
-            } else {
-              // Ошибка
-            }
-          })
-          .catch((error) => { console.log(error); });
-      }
-      jQuery(document).ready(function($) // страница прогружена
-       {
-
-
-
-      });
-    </script>
     <div id="unity-container">
       <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
