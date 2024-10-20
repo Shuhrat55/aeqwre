@@ -9,42 +9,6 @@
     <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
-    <script>
-      vkBridge.send('VKWebAppInit');
-          vkBridge.send('VKWebAppCheckNativeAds', { ad_format: 'interstitial'});
-          vkBridge.send('VKWebAppShowBannerAd', {
-              banner_location: 'bottom'
-              })
-              .then((data) => { 
-                if (data.result) {
-                  // Баннерная реклама отобразилась
-                }
-              })
-              .catch((error) => {
-                // Ошибка
-                console.log(error);
-              });
-      function FromUnityToJs ()   // функция вызывается из Unity
-      {
-        vkBridge.send('VKWebAppShowNativeAds', {
-          ad_format: 'interstitial' /* Тип рекламы */
-          })
-          .then( (data) => { 
-            if (data.result) {
-              // Реклама была показана
-            } else {
-              // Ошибка
-            }
-          })
-          .catch((error) => { console.log(error); });
-      }
-      jQuery(document).ready(function($) // страница прогружена
-       {
-         
-      });
-    </script>
     <div id="unity-container">
       <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
@@ -95,9 +59,9 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/Test.loader.js";
       var config = {
-        dataUrl: buildUrl + "/30fd418d1bcac5b5ad0b883e9750d455.data.unityweb",
-        frameworkUrl: buildUrl + "/f2d3cecdf1dbd97fc965dd62550d4e70.js.unityweb",
-        codeUrl: buildUrl + "/d9d737a7405ce962dfa0d3babbfad15c.wasm.unityweb",
+        dataUrl: buildUrl + "/c3495596478d5e233a526480d81d4462.data.unityweb",
+        frameworkUrl: buildUrl + "/7331159b2cb6d5e870e16405fe7ee203.js.unityweb",
+        codeUrl: buildUrl + "/6be4b2b5941e562bfa00b68acc1e02c9.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "My project (13)",
