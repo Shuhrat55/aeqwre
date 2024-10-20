@@ -1,9 +1,9 @@
 const cacheName = "DefaultCompany-My project (13)-1.0.2";
 const contentToCache = [
     "Build/Test.loader.js",
-    "Build/7331159b2cb6d5e870e16405fe7ee203.js.unityweb",
-    "Build/c3495596478d5e233a526480d81d4462.data.unityweb",
-    "Build/6be4b2b5941e562bfa00b68acc1e02c9.wasm.unityweb",
+    "Build/03591a1069dfc35f029f88dfe0cb7d33.js.unityweb",
+    "Build/dfec6eab7aee13390caaa432e773cd99.data.unityweb",
+    "Build/64106c8c4ac204c638723292f8c6d7d2.wasm.unityweb",
     "TemplateData/style.css"
 
 ];
